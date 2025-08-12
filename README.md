@@ -1,3 +1,3 @@
-# Funding
-## Work in progress
-### Will make getting Funding easy
+# Work In Progress
+## FUNDING
+### Get Funding Easily
