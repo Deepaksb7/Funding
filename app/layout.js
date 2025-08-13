@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
       <SessionWrapper>
         <Navbar />
-        <div className="min-h-[87.4vh] bg-gradient-to-r from-[#1b2c57]  to-[#334155] ">
+        <div className="min-h-[87.4vh] bg-gradient-to-r from-[#1b2c57]  to-[#334155] text-white">
           {children}
         </div>
         <Footer />
