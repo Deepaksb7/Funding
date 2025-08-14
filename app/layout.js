@@ -23,11 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gradient-to-r from-[#1b2c57]  to-[#334155] antialiased`}
       >
       <SessionWrapper>
         <Navbar />
-        <div className="min-h-[87.4vh] bg-gradient-to-r from-[#1b2c57]  to-[#334155] text-white">
+        <div className="min-h-screen bg-gradient-to-r from-[#1b2c57]  to-[#334155] text-white">
           {children}
         </div>
         <Footer />
