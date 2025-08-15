@@ -1,23 +1,11 @@
 "use client"
-import React from 'react'
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import { useSession, signIn, signOut } from "next-auth/react"
+import Dashboard from "@/components/dashboard"
 
-const dashboard = () => {
-  const { data: session } = useSession()
-    const router = useRouter()
+const dashboardpage = () => {
   
-    useEffect(() => {
-      if(!session) {
-          router.push("/login")
-        }
-    }, [session,router])
   return (
-    <div>
-      dashboard
-    </div>
+    <Dashboard/>  
   )
 }
 
-export default dashboard
+export default dashboardpage

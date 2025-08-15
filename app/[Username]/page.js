@@ -1,6 +1,6 @@
 import React from 'react'
 
-const username = ({params}) => {
+const username = async ({params}) => {
   return (
     <>
     <div className='w-full relative '>
@@ -11,7 +11,7 @@ const username = ({params}) => {
     </div>
     <div className="info flex items-center justify-center my-24 flex-col gap-1">
       <div className='font-bold text-lg'>
-      @{params.username} 
+      {params.username} 
       </div>
       <div className='text-slate-400'>
       Creating animated ATT's for vtts
@@ -62,9 +62,9 @@ const username = ({params}) => {
             <button className='xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 w-full'>Pay</button>
         </div>
         <div className='flex gap-2 mt-5'>
-          <button className='bg-slate-800 p-3 rounded-lg'>Pay $10</button>
-          <button className='bg-slate-800 p-3 rounded-lg'>Pay $20</button>
-          <button className='bg-slate-800 p-3 rounded-lg'>Pay $30</button>
+          <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center '>Pay $10</button>
+          <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center'>Pay $20</button>
+          <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center'>Pay $30</button>
         </div>
 
         </div>
