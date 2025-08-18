@@ -10,6 +10,6 @@ const PaymentSchema = new Schema({
     createdAt:{type:Date, default:Date.now},
     updateAt:{type:Date, default:Date.now},
     done:{type:Boolean,     default:false}
-})
+});
 
 export default mongoose.models.Payment || model("Payment",PaymentSchema)

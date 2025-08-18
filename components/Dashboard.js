@@ -14,7 +14,7 @@ const Dashboard = () => {
         if (!session) {
             router.push("/login")
         }
-    }, [session, router])
+    }, [session])
 
     const handlechange = (e) => {
         setform({ ...form, [e.target.name]: e.target.value })

@@ -9,6 +9,6 @@ const UserSchema = Schema({
     coverpic:{type:String},
     createdAt:{type:Date, default:Date.now},
     updatedAt:{type:Date, default:Date.now}
-})
+});
 
 export default mongoose.models.User || model("User",UserSchema);
