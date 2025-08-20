@@ -1,4 +1,3 @@
-"use client"
 import Dashboard from "@/components/Dashboard"
 
 const dashboardpage = () => {
@@ -9,3 +8,7 @@ const dashboardpage = () => {
 }
 
 export default dashboardpage
+
+export const metadata = {
+  title : "Dashboard - NeedOfFunds"
+}

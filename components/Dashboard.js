@@ -17,7 +17,7 @@ const Dashboard = () => {
         }else{
             getData()
         }
-        console.log(session )
+     
     }, [session,router])
 
     const getData= async ()=>{

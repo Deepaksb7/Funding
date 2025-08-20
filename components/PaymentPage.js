@@ -32,7 +32,6 @@ const PaymentPage = ({ username }) => {
         setcurrentUser(u)
         let dbpayments = await fetchpayment(username)
         setpayments(dbpayments)
-        console.log(u, dbpayments)
     }
 
     const pay = async (amount) => {
@@ -111,7 +110,7 @@ const PaymentPage = ({ username }) => {
                             </div>
                             <input onChange={handleChange} value={paymentform.message} name='message' type="text" className='w-full p-3 rounded-lg bg-slate-800' placeholder='Enter Message' />
                             <input onChange={handleChange} value={paymentform.amount} name='amount' type="text" className='w-full p-3 rounded-lg bg-slate-800' placeholder='Enter Amount' />
-                            <button onClick={() => pay(paymentform.amount)} className='xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 w-full disabled:from-gray-100 disabled:to-gray-600 ' disabled={paymentform.name?.length<3 || paymentform.message?.length<4} 
+                            <button onClick={() => pay(paymentform.amount)} className='xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 w-full disabled:from-gray-100 disabled:to-gray-600 ' disabled={paymentform.name?.length<3 || paymentform.message?.length<4 || paymentform.amount?.length<1} 
                             >Pay</button>
                         </div>
                         <div className='flex gap-2 mt-5'>

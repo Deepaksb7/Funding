@@ -8,15 +8,17 @@ const Login = () => {
   const router = useRouter()
 
   useEffect(() => {
+    document.title = "Login - NeedOfFunds"
     if(session) {
         router.push("/dashboard")
       }
-  }, [session])
+  }, [session,router])
   
        
   return (
+    
     <div className='text-white py-12'>
-      <h1 className='font-bold text-center text-3xl'>Login to raise your funds</h1>
+      <h1 className='font-bold text-center text-3xl'>Login to get started</h1>
 
       <div className="flex flex-col gap-2 min-h-screen items-center  p-10">
 
@@ -155,3 +157,6 @@ const Login = () => {
 }
 
 export default Login
+
+
+

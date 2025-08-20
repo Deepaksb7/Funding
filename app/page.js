@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -9,12 +10,16 @@ export default function Home() {
         What some funds and don't know where to start. Get funds by pitching your projects. Start now!
       </p>
       <div>
+      <Link href={"/login"}>
       <button type="button" className="xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Start Here</button>
+      </Link>
+      <Link href={"/about"}>
       <button type="button" className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Read More</button>
+      </Link>
       </div>
     </div>
     <div className="h-1 bg-white opacity-5"></div>
-
+   
     <div className="text-white container mx-auto pb-32 pt-14 px-10">
   <h2 className="text-3xl font-bold text-center mb-14">Your Fans can buy you a Chai</h2>
   <div className="flex gap-5 justify-between">

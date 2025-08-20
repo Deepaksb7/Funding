@@ -24,3 +24,10 @@ const username = async ({params}) => {
 }
 
 export default username
+
+export async function generateMetadata({ params }) {
+  const { username } = await params; 
+  return {
+    title: `${username} - NeedOfFunds`
+  }
+}
