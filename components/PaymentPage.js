@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { fetchpayment, initiate } from '@/actions/useractions'
 import { useSession } from 'next-auth/react'
 import { fetchuser } from '@/actions/useractions'
+import { notFound } from "next/navigation"
 
 const PaymentPage = ({ username }) => {
     // const {data:session} = useSession()
@@ -81,10 +82,10 @@ const PaymentPage = ({ username }) => {
                     {username}
                 </div>
                 <div className='text-slate-400'>
-                    Creating animated ATT's for vtts
+                    lets help {username} to get funds
                 </div>
                 <div className='text-slate-400'>
-                    943534 member . post 14 . $45054656 release
+                    {payments.length} payments . ₹{payments.reduce((a,b)=>a+b.amount,0)} raised
                 </div>
 
                 <div className="payments flex gap-5 w-[80%] mt-8">
