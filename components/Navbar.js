@@ -55,7 +55,7 @@ const Navbar = () => {
                         </ul>
                     </div></>
                 }
-                {session && <button className="xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 " onClick={() => { signOut() }} >Logout</button>}
+                {session && <button className="xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 " onClick={() => { signOut({callbackUrl: '/login'}) }} >Logout</button>}
                 {!session &&
                     <Link href={"/login"}>
                         <button className="xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 " >Login</button>
