@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <>
     <div className="flex justify-center flex-col gap-4 items-center text-white h-[44vh] p-5 md:p-0">
-      <div className="font-bold flex gap-1 justify-center items-center text-5xl text-center md:text-left">In Need Of Funds! <span><img className="w-30 mix-blend-hard-light" src="/fundingwb.gif" alt="" /></span></div>
+      <div className="font-bold flex gap-1 justify-center items-center text-5xl text-center md:text-left">In Need Of Funds! <span><Image width={30} height={30} className="w-30 mix-blend-hard-light" src="/fundingwb.gif" alt="" /></span></div>
       <p className='text-center md:text-left'>
         What some funds and don't know where to start. Get funds by pitching your projects. Start now!
       </p>
@@ -24,17 +25,17 @@ export default function Home() {
   <h2 className="text-3xl font-bold text-center mb-14">Your Fans can give you some funds</h2>
   <div className="flex gap-5 justify-between">
     <div className="item space-y-3 flex flex-col items-center justify-center">
-      <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt="" />
+      <Image height={88} className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/man.gif" alt="" />
       <p className="font-bold text-center">People want to help</p>
       <p className="text-center">Intrested people are available to support you</p>
     </div>
     <div className="item space-y-3 flex flex-col items-center justify-center">
-      <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt="" />
+      <Image height={88} className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/coin.gif" alt="" />
       <p className="font-bold text-center">People want to contribute</p>
       <p className="text-center">Intrested people are willing to contribute financially</p>
     </div>
     <div className="item space-y-3 flex flex-col items-center justify-center">
-      <img className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt="" />
+      <Image height={88} className="bg-slate-400 rounded-full p-2 text-black" width={88} src="/group.gif" alt="" />
       <p className="font-bold text-center">People want to collaborate</p>
       <p className="text-center">Intrested people are ready to collaborate with you</p>
     </div>

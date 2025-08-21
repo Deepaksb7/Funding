@@ -5,6 +5,7 @@ import { fetchpayment, initiate } from '@/actions/useractions'
 import { useSession } from 'next-auth/react'
 import { fetchuser } from '@/actions/useractions'
 import { notFound } from "next/navigation"
+import Image from 'next/image'
 
 const PaymentPage = ({ username }) => {
     // const {data:session} = useSession()
@@ -71,10 +72,20 @@ const PaymentPage = ({ username }) => {
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
 
             <div className='w-full relative '>
-                <img className='object-cover w-full h-[350]' src={currentUser.coverpic} alt="" />
+                {/* <Image width={50} height={50} className='object-cover w-full h-[350]' src={currentUser.coverpic } alt="nothing" />
                 <div className='absolute right-[39%] md:right-[45%] -bottom-22 border-white border-2 overflow-hidden rounded-full size-30 md:size-45 ' >
-                    <img className='rounded-full object-cover size-45'  src={currentUser.profilepic} alt="" />
+                    <Image width={45} height={45} className='rounded-full object-cover size-45'  src={currentUser.profilepic } alt="nothing" />
+                </div> */}
+
+                <Image width={100} height={350} className='object-cover w-full h-[350]' src={currentUser.coverpic || "/img.jpg" } alt="nothing" />
+                <div className='absolute right-[39%] md:right-[45%] -bottom-22 border-white border-2 overflow-hidden rounded-full size-30 md:size-45 ' >
+                <Image width={45} height={45} className='rounded-full object-cover size-45'  src={currentUser.profilepic || "/img.jpg" } alt="nothing" />
                 </div>
+
+                {/* <Image width={50} height={50} className='object-cover w-full h-[350]' src={"/coin.gif"} alt="nothing" />
+                <div className='absolute right-[39%] md:right-[45%] -bottom-22 border-white border-2 overflow-hidden rounded-full size-30 md:size-45 ' >
+                    <Image width={45} height={45} className='rounded-full object-cover size-45'  src={"/coin.gif"} alt="nothing" />
+                </div> */}
             </div>
             <div className="info flex items-center justify-center my-24 flex-col gap-1">
                 <div className='font-bold text-lg'>
@@ -89,11 +100,11 @@ const PaymentPage = ({ username }) => {
 
                 <div className="payments flex gap-5 w-[80%] mt-8 flex-col md:flex-row">
                     <div className="supporters w-full md:w-1/2 bg-slate-900 my-5 text-white p-10">
-                        <h2 className='text-2xl font-bold'>Supporter's</h2>
+                        <h2 className='text-2xl font-bold'>Supporters</h2>
                         <ul className='mx-5 text-lg '>
                             {payments.length === 0 && "NO FUNDS YET"}
                             {payments.map((p, i) => {
-                                return <li key={i} className='my-4 flex items-center gap-2'><img width={28} src="/avatar.gif" alt="" />
+                                return <li key={i} className='my-4 flex items-center gap-2'><Image width={28} height={28} src="/avatar.gif" alt="" />
                                     <span>
                                         {p.name} donated <b>₹{p.amount}</b> with a message "{p.message}"
                                     </span>
