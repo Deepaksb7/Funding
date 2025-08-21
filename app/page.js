@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex justify-center flex-col gap-4 items-center text-white h-[44vh] p-5 md:p-0">
       <div className="font-bold flex gap-1 justify-center items-center text-5xl text-center md:text-left">In Need Of Funds! <span><Image width={30} height={30} className="w-30 mix-blend-hard-light" src="/fundingwb.gif" alt="" /></span></div>
       <p className='text-center md:text-left'>
-        What some funds and don't know where to start. Get funds by pitching your projects. Start now!
+        What some funds and dont know where to start. Get funds by pitching your projects. Start now!
       </p>
       <div>
       <Link href={"/login"}>
