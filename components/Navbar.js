@@ -13,7 +13,7 @@ const Navbar = () => {
     //  </>}
 
     return (
-        <nav className='flex items-center bg-gradient-to-r from-[#1d3263]  to-[#344863] text-white justify-between p-3'>
+        <nav className='flex items-center bg-gradient-to-r from-[#1d3263]  to-[#344863] text-white justify-between p-3 flex-col md:flex-row'>
             <div className="logo font-bold text-xl">
                 <Link href={"/"}>
                 <span>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <li>Sign up</li>
                 <li>Login</li>
             </ul> */}
-            <div className='relative flex justify-center items-center  md:block gap-4'>
+            <div className='relative flex justify-center items-center md:block gap-4'>
                 {session && <>
                     <button onClick={() => setShowdropdown(!showdropdown)} onBlur={() => {
                         setTimeout(() => {

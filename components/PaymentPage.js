@@ -72,7 +72,7 @@ const PaymentPage = ({ username }) => {
 
             <div className='w-full relative '>
                 <img className='object-cover w-full h-[350]' src={currentUser.coverpic} alt="" />
-                <div className='absolute right-[45%] -bottom-22 border-white border-2 overflow-hidden rounded-full size-45' >
+                <div className='absolute right-[39%] md:right-[45%] -bottom-22 border-white border-2 overflow-hidden rounded-full size-30 md:size-45 ' >
                     <img className='rounded-full object-cover size-45'  src={currentUser.profilepic} alt="" />
                 </div>
             </div>
@@ -87,8 +87,8 @@ const PaymentPage = ({ username }) => {
                     {payments.length} payments . ₹{payments.reduce((a,b)=>a+b.amount,0)} raised
                 </div>
 
-                <div className="payments flex gap-5 w-[80%] mt-8">
-                    <div className="supporters w-1/2 bg-slate-900 my-5 text-white p-10">
+                <div className="payments flex gap-5 w-[80%] mt-8 flex-col md:flex-row">
+                    <div className="supporters w-full md:w-1/2 bg-slate-900 my-5 text-white p-10">
                         <h2 className='text-2xl font-bold'>Supporter's</h2>
                         <ul className='mx-5 text-lg '>
                             {payments.length === 0 && "NO FUNDS YET"}
@@ -102,7 +102,7 @@ const PaymentPage = ({ username }) => {
 
                         </ul>
                     </div>
-                    <div className="makepayement w-1/2 bg-slate-900 my-5 text-white p-10">
+                    <div className="makepayement w-full md:w-1/2 bg-slate-900 my-5 text-white p-10">
                         <h2 className='text-2xl font-bold'>Make A Payment</h2>
                         <div className='flex gap-2 flex-col'>
                             <div>
@@ -113,7 +113,7 @@ const PaymentPage = ({ username }) => {
                             <button onClick={() => pay(paymentform.amount)} className='xt-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 py-2.5 text-center me-2 w-full disabled:from-gray-100 disabled:to-gray-600 ' disabled={paymentform.name?.length<3 || paymentform.message?.length<4 || paymentform.amount?.length<1} 
                             >Pay</button>
                         </div>
-                        <div className='flex gap-2 mt-5'>
+                        <div className='flex flex-col md:flex-row  gap-2 mt-5'>
                             <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center' onClick={() => pay(10)}>Pay ₹10</button>
                             <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center' onClick={() => pay(20)}>Pay ₹20</button>
                             <button className='bg-slate-800 p-3 bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:outline-none font-medium cursor-pointer rounded-lg text-sm px-5 text-center' onClick={() => pay(30)}>Pay ₹30</button>
