@@ -18,7 +18,7 @@ const Dashboard = () => {
             getData()
         }
 
-    }, [session, router])
+    }, [session, router,getData])
 
     const getData = async () => {
         let u = await fetchuser(session.user.name)

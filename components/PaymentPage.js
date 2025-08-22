@@ -16,7 +16,7 @@ const PaymentPage = ({ username }) => {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [getData])
 
 
     const handleChange = (e) => {
