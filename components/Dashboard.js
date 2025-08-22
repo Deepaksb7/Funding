@@ -10,7 +10,7 @@ const Dashboard = () => {
     const { data: session, update } = useSession()
     const router = useRouter()
     const [form, setform] = useState({})
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
     useEffect(() => {
         if (!session) {
             router.push("/login")
