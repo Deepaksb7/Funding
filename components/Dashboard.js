@@ -15,15 +15,19 @@ const Dashboard = () => {
         if (!session) {
             router.push("/login")
         } else {
+            const getData = async () => {
+                let u = await fetchuser(session.user.name)
+                setform(u)
+            }
             getData()
         }
 
-    }, [session, router,getData])
+    }, [session, router])
 
-    const getData = async () => {
-        let u = await fetchuser(session.user.name)
-        setform(u)
-    }
+    // const getData = async () => {
+    //     let u = await fetchuser(session.user.name)
+    //     setform(u)
+    // }
 
     const handlechange = (e) => {
         setform({ ...form, [e.target.name]: e.target.value })

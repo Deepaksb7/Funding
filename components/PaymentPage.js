@@ -15,8 +15,14 @@ const PaymentPage = ({ username }) => {
     const [payments, setpayments] = useState([])
 
     useEffect(() => {
+        const getData = async () => {
+        let u = await fetchuser(username)
+        setcurrentUser(u)
+        let dbpayments = await fetchpayment(username)
+        setpayments(dbpayments)
+    }
         getData()
-    }, [getData])
+    }, [username])
 
 
     const handleChange = (e) => {
@@ -28,12 +34,12 @@ const PaymentPage = ({ username }) => {
     };
 
 
-    const getData = async () => {
-        let u = await fetchuser(username)
-        setcurrentUser(u)
-        let dbpayments = await fetchpayment(username)
-        setpayments(dbpayments)
-    }
+    // const getData = async () => {
+    //     let u = await fetchuser(username)
+    //     setcurrentUser(u)
+    //     let dbpayments = await fetchpayment(username)
+    //     setpayments(dbpayments)
+    // }
 
     const pay = async (amount) => {
         let a = await initiate(amount, username, paymentform)
