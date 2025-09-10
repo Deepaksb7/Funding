@@ -106,11 +106,11 @@ try {
     },
   };
 
-  const handler = NextAuth(authOptions);
   
 } catch (error) {
   console.error("NextAuth initialization failed:", error);
   // Re-throw the error to ensure Vercel logs the stack trace
   throw error;
 }
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
